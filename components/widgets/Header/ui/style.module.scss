@@ -1,0 +1,37 @@
+// styles/Header.module.scss
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  background: white;
+  // по умолчанию — видим
+  &.visible {
+    position: fixed;
+    animation: slide-down 0.5s forwards ease-in-out;
+  }
+  // скрываемся за верхнюю границу
+  //   &.hidden {
+  //   }
+}
+
+// keyframes
+@keyframes slide-up {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes slide-down {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

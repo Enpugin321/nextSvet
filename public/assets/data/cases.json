@@ -2,10 +2,8 @@
   {
     "id": 1,
     "title": "Название кейса 1",
-    "project": "Проект A",
-    "motor": "V8 Turbo",
-    "time": "10 дней",
-    "photoUrlCase": "https://avatars.mds.yandex.net/get-altay/5449402/2a0000017f494ef687a578c34865cc1c6518/XXL_height"
+    "description": "Проект A",
+    "img": "https://avatars.mds.yandex.net/get-altay/5449402/2a0000017f494ef687a578c34865cc1c6518/XXL_height"
   },
   {
     "id": 2,
@@ -13,7 +11,7 @@
     "project": "Проект B",
     "motor": "V6",
     "time": "14 дней",
-    "photoUrlCase": "https://avatars.mds.yandex.net/get-altay/5449402/2a0000017f494ef687a578c34865cc1c6518/XXL_height"
+    "img": "https://avatars.mds.yandex.net/get-altay/5449402/2a0000017f494ef687a578c34865cc1c6518/XXL_height"
   },
   {
     "id": 3,
@@ -21,7 +19,7 @@
     "project": "Проект C",
     "motor": "Electric",
     "time": "7 дней",
-    "photoUrlCase": "https://avatars.mds.yandex.net/get-altay/5449402/2a0000017f494ef687a578c34865cc1c6518/XXL_height"
+    "img": "https://avatars.mds.yandex.net/get-altay/5449402/2a0000017f494ef687a578c34865cc1c6518/XXL_height"
   },
   {
     "id": 4,
@@ -29,7 +27,7 @@
     "project": "Проект D",
     "motor": "V8 Turbo",
     "time": "12 дней",
-    "photoUrlCase": "https://avatars.mds.yandex.net/get-altay/5449402/2a0000017f494ef687a578c34865cc1c6518/XXL_height"
+    "img": "https://avatars.mds.yandex.net/get-altay/5449402/2a0000017f494ef687a578c34865cc1c6518/XXL_height"
   },
   {
     "id": 5,
@@ -37,7 +35,7 @@
     "project": "Проект E",
     "motor": "V6",
     "time": "9 дней",
-    "photoUrlCase": "https://avatars.mds.yandex.net/get-altay/5449402/2a0000017f494ef687a578c34865cc1c6518/XXL_height"
+    "img": "https://avatars.mds.yandex.net/get-altay/5449402/2a0000017f494ef687a578c34865cc1c6518/XXL_height"
   },
   {
     "id": 6,
@@ -45,7 +43,7 @@
     "project": "Проект F",
     "motor": "Electric",
     "time": "11 дней",
-    "photoUrlCase": "https://avatars.mds.yandex.net/get-altay/5449402/2a0000017f494ef687a578c34865cc1c6518/XXL_height"
+    "img": "https://avatars.mds.yandex.net/get-altay/5449402/2a0000017f494ef687a578c34865cc1c6518/XXL_height"
   },
   {
     "id": 7,
@@ -53,7 +51,7 @@
     "project": "Проект G",
     "motor": "V8 Turbo",
     "time": "8 дней",
-    "photoUrlCase": "https://avatars.mds.yandex.net/get-altay/5449402/2a0000017f494ef687a578c34865cc1c6518/XXL_height"
+    "img": "https://avatars.mds.yandex.net/get-altay/5449402/2a0000017f494ef687a578c34865cc1c6518/XXL_height"
   },
   {
     "id": 8,
@@ -61,6 +59,6 @@
     "project": "Проект H",
     "motor": "V6",
     "time": "13 дней",
-    "photoUrlCase": "https://avatars.mds.yandex.net/get-altay/5449402/2a0000017f494ef687a578c34865cc1c6518/XXL_height"
+    "img": "https://avatars.mds.yandex.net/get-altay/5449402/2a0000017f494ef687a578c34865cc1c6518/XXL_height"
   }
 ]

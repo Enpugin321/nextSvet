@@ -1,4 +1,4 @@
-import { Manrope, Montserrat } from 'next/font/google';
+import { Manrope, Montserrat, Unbounded } from 'next/font/google';
 
 export const manrope = Manrope({
   subsets: ['latin', 'cyrillic'],
@@ -11,5 +11,12 @@ export const montserrat = Montserrat({
   subsets: ['latin', 'cyrillic'],
   weight: ['400', '500', '600', '700', '800', '900'],
   variable: '--font-montserrat',
+  display: 'swap',
+});
+
+export const unbounded = Unbounded({
+  subsets: ['latin', 'cyrillic'],
+  weight: ['200', '400', '500', '600', '700', '800', '900'],
+  variable: '--font-unbounded',
   display: 'swap',
 });

@@ -1,6 +1,7 @@
 import type React from 'react';
-// import Image from 'next/image';
-// import { PlaceHolder } from '@/public/assets/images';
+import Image from 'next/image';
+import StarSVG from '@/public/assets/vectors/Frame96.svg';
+import testJPG from '@/public/assets/images/test.jpg';
 
 interface WorkStepProps {
   number: string;
@@ -18,19 +19,26 @@ const WorkStep: React.FC<WorkStepProps> = ({
   return (
     <div className='relative flex justify-between items-center w-full'>
       <div
-        className={`flex flex-col gap-5 ${
+        className={`flex flex-col gap-5 relative  ${
           imagePosition === 'right' ? 'order-1' : 'order-2'
         } w-1/2 px-12`}
       >
-        <h4 className='text-[#4A2511] text-5xl font-manrope font-light'>{number}</h4>
-        <h4 className='text-[#4A2511] text-4xl font-manrope font-normal'>{title}</h4>
-        <p className='text-[#4A2511] text-lg font-montserrat font-light max-w-md'>
-          {description}
-        </p>
+        <h4 className='text-graphite/10 text-[268px] xxl:text-[350px] font-unbounded font-normal'>
+          {number}
+        </h4>
+
+        <div className='absolute bg-white top-2/3'>
+          <h4 className='text-graphite text-2xl xxl:text-3xl font-unbounded font-normal'>
+            {title}
+          </h4>
+          <p className='text-graphite text-lg xxl:text-xl font-manrope font-light max-w-xl'>
+            {description}
+          </p>
+        </div>
       </div>
       <div className={`${imagePosition === 'right' ? 'order-2' : 'order-1'} w-1/2 px-12`}>
-        <div className='bg-gray-100 border border-[#4A2511] rounded-md w-full aspect-video flex items-center justify-center'>
-          {/* <Image alt='' className='h-full w-full' src={PlaceHolder} /> */}
+        <div className='rounded-md w-full flex items-center justify-center'>
+          <Image alt='' className='h-full w-full' src={testJPG || '/placeholder.svg'} />
         </div>
       </div>
     </div>
@@ -60,40 +68,111 @@ export const HowWeWork: React.FC = () => {
         'Профессиональная установка с учетом всех технических нюансов, а также настройка для комфортного использования.',
       imagePosition: 'right' as const,
     },
+    {
+      number: '04',
+      title: 'Монтаж и настройка',
+      description:
+        'Профессиональная установка с учетом всех технических нюансов, а также настройка для комфортного использования.',
+      imagePosition: 'left' as const,
+    },
   ];
 
   return (
-    <div className='flex flex-col gap-16 pt-12 relative w-full'>
+    <div className='flex flex-col gap-16 pt-10 relative w-full'>
       {/* Timeline container */}
       <div className='absolute left-1/2 h-[calc(100%-10rem)] w-0.5'>
-        {/* Timeline line - now only between dots */}
+        {/* First line segment */}
         <div
-          className='absolute w-0.5 bg-[#4A2511]'
+          className='absolute w-0.5 bg-accent'
           style={{
-            top: '10%',
-            height: '85%', // 90% - 10% = 80% of the container height
+            top: 'calc(10% + 80px + 10px)', // Star height (60px) + 10px gap
+            height: 'calc(30% - 80px - 20px)', // Distance to middle minus star height and gaps
             left: 0,
           }}
         />
 
-        {/* First dot - aligned with middle of first image */}
+        {/* Second line segment */}
         <div
-          className='absolute w-6 h-6 rounded-full bg-[#4A2511] -left-[11px]'
-          style={{ top: '10%' }}
+          className='absolute w-0.5 bg-accent'
+          style={{
+            top: 'calc(40% + 80px + 10px)', // Middle position + Star height (60px) + 10px gap
+            height: 'calc(26% - 80px - 20px)', // Distance to bottom minus star height and gaps
+            left: 0,
+          }}
         />
-        {/* Middle dot - stays in the same position */}
+
+        {/* Third line segment */}
         <div
-          className='absolute w-6 h-6 rounded-full bg-[#4A2511] -left-[11px]'
-          style={{ top: '55%' }}
+          className='absolute w-0.5 bg-accent'
+          style={{
+            top: 'calc(66% + 80px + 10px)', // Middle position + Star height (60px) + 10px gap
+            height: 'calc(28% - 80px - 20px)', // Distance to bottom minus star height and gaps
+            left: 0,
+          }}
         />
-        {/* Last dot - aligned with middle of last image */}
+
+        {/* First star - aligned with middle of first image */}
         <div
-          className='absolute w-6 h-6 rounded-full bg-[#4A2511] -left-[11px]'
-          style={{ top: '95%' }}
-        />
+          className='absolute z-20'
+          style={{ top: '10%', transform: 'translateX(-50%)' }}
+        >
+          <div style={{ width: '80px', height: '80px', position: 'relative' }}>
+            <Image
+              src={StarSVG || '/placeholder.svg'}
+              alt='Star'
+              fill
+              style={{ objectFit: 'contain' }}
+            />
+          </div>
+        </div>
+
+        {/* Second star */}
+        <div
+          className='absolute z-20'
+          style={{ top: '40%', transform: 'translateX(-50%)' }}
+        >
+          <div style={{ width: '80px', height: '80px', position: 'relative' }}>
+            <Image
+              src={StarSVG || '/placeholder.svg'}
+              alt='Star'
+              fill
+              style={{ objectFit: 'contain' }}
+            />
+          </div>
+        </div>
+
+        {/* Third star */}
+        <div
+          className='absolute z-20'
+          style={{ top: '66%', transform: 'translateX(-50%)' }}
+        >
+          <div style={{ width: '80px', height: '80px', position: 'relative' }}>
+            <Image
+              src={StarSVG || '/placeholder.svg'}
+              alt='Star'
+              fill
+              style={{ objectFit: 'contain' }}
+            />
+          </div>
+        </div>
+
+        {/* Last star */}
+        <div
+          className='absolute z-20'
+          style={{ top: '94%', transform: 'translateX(-50%)' }}
+        >
+          <div style={{ width: '80px', height: '80px', position: 'relative' }}>
+            <Image
+              src={StarSVG || '/placeholder.svg'}
+              alt='Star'
+              fill
+              style={{ objectFit: 'contain' }}
+            />
+          </div>
+        </div>
       </div>
 
-      <div className='flex flex-col gap-36'>
+      <div className='flex flex-col gap-8'>
         {steps.map((step, index) => (
           <WorkStep
             key={index}

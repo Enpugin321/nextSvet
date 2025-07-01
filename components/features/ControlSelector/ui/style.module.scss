@@ -1,0 +1,77 @@
+/* file: components/style.module.scss */
+
+.tabList {
+  display: flex;
+  flex-wrap: nowrap; /* Не даём элементам переноситься */
+  overflow-x: auto; /* Включаем горизонтальную прокрутку */
+  overflow-y: hidden; /* Скрываем вертикальную полосу прокрутки */
+  width: 100%;
+  padding-bottom: 0.5rem; /* Чтобы линия активного элемента не обрезалась */
+  gap: 2rem; /* Расстояние между вкладками */
+
+  /* Для плавного «кинетического» скролла на iOS */
+  -webkit-overflow-scrolling: touch;
+
+  /* Скрываем стандартный скроллбар (Chrome, Safari, Edge, Opera) */
+  &::-webkit-scrollbar {
+    height: 6px; /* тонкая горизонтальная полоска */
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+  }
+}
+
+.tabItem {
+  flex: 0 0 auto; /* Не растягиваем и не сжимаем элемент */
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap; /* Не даём тексту переноситься внутри li */
+  width: auto;
+
+  h3 {
+    font-size: 1.25rem;
+    font-weight: 400;
+    font-family: 'Unbounded', sans-serif;
+    color: #a0a0a0;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transition: transform 0.3s ease;
+  }
+
+  &.active {
+    /* Ширина активной вкладки равна 33.333% */
+    /*    width: 33.333%; */
+    /* Если хотите, чтобы активная вкладка меняла свою ширину: 
+       можно закомментировать flex-basis, а раскомментировать width 
+    */
+    flex-basis: 33.333%;
+    h3 {
+      color: #000;
+      transform: scale(1.05);
+    }
+
+    &::after {
+      transform: translateX(-50%) scaleX(1);
+    }
+  }
+}

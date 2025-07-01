@@ -1,16 +1,11 @@
-@import 'tailwindcss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@theme {
-  --font-manrope: 'Manrope', sans-serif;
-  --font-montserrat: 'Montserrat', sans-serif;
-  --font-inter: 'Inter', sans-serif;
-
-  --color-accent-color: #bc936a;
-  --color-addition-color: #45291e;
-  --color-beige-custom: #e3cfbc;
-  --color-milk-white-custom: #fffdf8;
-
-  --shadow-custom: 0px 4px 10px rgba(0, 0, 0, 0.15);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
@@ -29,4 +24,12 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.bg-half-gradient {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 58.32%,
+    rgba(0, 0, 0, 0.8) 101.06%
+  );
 }

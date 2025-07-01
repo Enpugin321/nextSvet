@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
-import { manrope, montserrat } from './ui/fonts';
+import { manrope, montserrat, unbounded } from './ui/fonts';
 import './globals.css';
-import { Header } from '@/components/shared';
+import { Header } from '@/components/widgets';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -15,7 +15,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${manrope.variable} ${montserrat.variable} antialiased`}>
+      <body
+        className={`${manrope.variable} ${montserrat.variable} ${unbounded.variable} antialiased`}
+      >
         <Header />
         {children}
       </body>
